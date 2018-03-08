@@ -2,7 +2,7 @@ lesson-template <img src="/img/logo.png" align="right" />
 ===========================================================
 
 ## Lesson Overview
-This repository models the layout of a SLU DSS lesson. An overview of our lesson structure is available from the associated slides.
+This repository models the layout of a SLU DSS lesson. An overview of our lesson structure is available from the lesson's associated [slides](https://slu-dss.github.io/lesson-template/). Additional details are avilable from this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).
 
 ### Objectives
 At the end of this lesson, participants should be able to:
