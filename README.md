@@ -1,4 +1,4 @@
-lesson-template <img src="https://raw.githubusercontent.com/slu-dss/fall-2017-seminar-01/sources/logo.png" align="right" />
+lesson-template <img src="/img/logo.png" align="right" />
 ===========================================================
 
 ## Lesson Overview
