@@ -36,10 +36,17 @@ devtools::install_github("yihui/xaringan")
 
 ### Repository Contents
 This repository contains files for:
+- `challenge/` - lesson challenge materials
+- `data/` - lesson data
 - `docs/` - lesson slides, which can be seen [here](https://slu-dss.github.io/lesson-template/)
-- `img` - image files associated with the lesson
+- `img/` - image files associated with the lesson
+- `notebook/` - lesson notebooks
+
+
 - `lesson-template.Rproj` - R project for lesson
 - `.gitignore`
+- `CONDUCT.md` - code of conduct for contributors
+- `CONTRIBUTORS.md` - list of lesson contributors
 - `LICENSE`
 - `README.md` - seminar resources
 
