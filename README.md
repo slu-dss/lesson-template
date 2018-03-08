@@ -46,6 +46,9 @@ This repository contains files for:
 ### Resources
 < This should be a bulleted list of online resources that are connected to the material covered in the lesson. >
 
+## Contributor Code of Conduct
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
 ## About the SLU DSS
 ### < DSS Seminar >
 < seminar description >
@@ -55,4 +58,3 @@ The [SLU Data Science Seminar](https://slu-dss.githb.io) (DSS) is a collaborativ
 
 ### About Saint Louis University <img src="/img/sluLogo.png" align="right" />
 Founded in 1818, [Saint Louis University](http://www.slu.edu) is one of the nation’s oldest and most prestigious Catholic institutions. Rooted in Jesuit values and its pioneering history as the first university west of the Mississippi River, SLU offers nearly 13,000 students a rigorous, transformative education of the whole person. At the core of the University’s diverse community of scholars is SLU’s service-focused mission, which challenges and prepares students to make the world a better, more just place.
-
