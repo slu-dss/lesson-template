@@ -8,8 +8,25 @@ This repository models the layout of a SLU DSS lesson. An overview of our lesson
 < This should be an enumerated list of objectives for each lesson. >
 
 ### Dependencies
-This lesson requires the following `R` packages:
+This lesson requires the following `R` packages from CRAN:
+- [`devtools`](https://github.com/r-lib/devtools)
+- [`knitr`](https://yihui.name/knitr/)
+- [`RMarkdown`](https://rmarkdown.rstudio.com)
 
+To install a package from CRAN, type the following into your Console:
+
+```r
+install.packages("devtools")
+```
+
+This lesson requires the following `R` packages from GitHub:
+- [`xaringan`](https://github.com/yihui/xaringan)
+
+To install a package from GitHub:
+
+```r
+devtools::install_github("yihui/xaringan")
+```
 
 ### Repository Contents
 This repository contains files for:
