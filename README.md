@@ -34,7 +34,9 @@ devtools::install_github("yihui/xaringan")
 
 ### Repository Contents
 This repository contains files for:
-- `lesson-template.Rproj` - R project for seminar
+- `docs/` - lesson slides, which can be seen [here](https://slu-dss.github.io/lesson-template/)
+- `img` - image files associated with the lesson
+- `lesson-template.Rproj` - R project for lesson
 - `.gitignore`
 - `LICENSE`
 - `README.md` - seminar resources
