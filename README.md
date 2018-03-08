@@ -9,7 +9,7 @@ This repository models the layout of a SLU DSS lesson. An overview of our lesson
 
 ### Dependencies
 This lesson requires the following `R` packages:
-- 
+
 
 ### Repository Contents
 This repository contains files for:
