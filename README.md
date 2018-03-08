@@ -5,7 +5,11 @@ lesson-template <img src="/img/logo.png" align="right" />
 This repository models the layout of a SLU DSS lesson. An overview of our lesson structure is available from the associated slides.
 
 ### Objectives
-< This should be an enumerated list of objectives for each lesson. >
+At the end of this lesson, participants should be able to:
+
+1. Locate the key elements of a SLU DSS lesson within a lesson repository.
+2. Describe the purposes of each key element.
+3. Employ RStudio to update a lesson.
 
 ### Dependencies
 This lesson requires the following `R` packages from CRAN:
