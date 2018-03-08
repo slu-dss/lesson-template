@@ -1,8 +1,8 @@
 ---
 title: "Lesson Template"
-subtitle: ""
-author: "Yihui Xie"
-date: "2016/12/12"
+subtitle: "An Overview of How Our Lessons Are Structured"
+author: "SLU DSS"
+date: "3/7/2018"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -12,100 +12,159 @@ output:
       countIncrementalSlides: false
 ---
 
+class: inverse, center, middle
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-
-???
-
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+# Overview
 
 ---
-class: center, middle
+# What is a lesson?
 
-# xaringan
+Each lesson for SLU DSS is a part of a seminar, which is a group of lessons organized around a core theme. 
 
-### /ʃæ.'riŋ.ɡæn/
+--
+
+We currently have six seminars that we have developed content for:
+
+1. Getting Started with `R`
+
+2. Data Management in `R`
+
+3. Plots and Figures in `R`
+
+4. Building Linear Models in `R`
+
+5. Mapping Data in `R`
+
+6. Functions and Packages in `R`
+
+--
+
+Seminars typically have four lessons. Each lesson is designed to be delivered in an hour-long session.
 
 ---
+
+# How are lessons organized?
+
+Each lesson has a corresponding GitHub repository. We are currently revising each lesson so that it contains the following key items:
+
+* A **`README.md`** file that describes the lesson's objectives, `R` packages it requires, and provides links to additional resources.
+
+* An **R project** (`.Rproj`) file that participants can use to easily access lesson materials.
+
+* Any **data** that is required, *though we prioritize using data available in packages.*
+
+---
+
+# How are lessons organized?
+
+Each lesson has a corresponding GitHub repository. We are currently revising each lesson so that it contains the following key items:
+
+* An **R notebook** written in the style of [literate programming](https://en.wikipedia.org/wiki/Literate_programming) that contains narrative text that explains the particulars of a topic, provides example code, and provides empty code blocks for participants to practice in.
+
+   * A complete version of the R notebook that contains all code, including the solutions to the empty areas provided for participant practice.
+   
+* A set of **slides** (like these!) made with `xaringan` that give a high level overview of the lesson.
+
+* A **challenge** for students to complete after the lesson if they want to practice, and a corresponding set of replication code for students to check their own work.
+
+---
+
+# How can I help?
+
+So glad that you asked! We are looking for "lesson maintainers" to help us with a variety of tasks:
+
+1. Converting our current lessons into this lesson format.
+
+2. Adding overview slides like these.
+
+3. Updating code so that it follows the most state-of-the-art standards (e.g. `tidyverse`)
+
+4. Creating the "complete" versions of notebooks that contain solutions.
+
+5. Creating challenges for students to test their knowledge after each lesson.
+
+--
+
+No expertise with the lesson is necessary - we're happy to help you grow your skills with `R`, the `tidyverse`, and Git/GitHub!
+
+---
+
 class: inverse, center, middle
 
-# Get Started
+# Getting Started
 
 ---
 
-# Hello World
+# What You'll Need
 
-Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
+To successfully contribute as a lesson maintainer, you'll need the following software tools installed on your computer:
 
-```{r eval=FALSE, tidy=FALSE}
+1. `R` ([download](https://www.r-project.org))
+
+2. RStudio ([download](https://www.rstudio.com/products/rstudio/download/#download))
+
+3. Git ([download](https://git-scm.com))
+
+It isn't necessary, but a flexible text editor like [Atom](https://atom.io) is also very useful for updating particular parts of lessons.
+
+---
+
+# What You'll Need
+
+You'll also need a few R packages that you can download and install from CRAN:
+
+1. [`devtools`](https://github.com/r-lib/devtools)
+
+2. [`knitr`](https://yihui.name/knitr/)
+
+3. [`RMarkdown`](https://rmarkdown.rstudio.com)
+
+4. the [`tidyverse`](http://tidyverse.org)
+
+--
+
+To install a package from CRAN, type the following into your console:
+
+```r
+install.packages("devtools")
+```
+
+---
+
+# What You *Might* Need
+
+If you are contributing to the development of slides for lessons, you'll need the [`xaringan`](https://github.com/yihui/xaringan) package.
+
+--
+
+To install a package from GitHub using `devtools`, type the following into your console:
+
+```r
 devtools::install_github("yihui/xaringan")
 ```
 
 --
 
-You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
-
-- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
-
---
-
-- Click the `Knit` button to compile it;
-
---
-
-- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
-
-.footnote[
-[1] 中文用户请看[这份教程](http://slides.yihui.name/xaringan/zh-CN.html)
-
-[2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
-]
-
----
-background-image: url(`r xaringan:::karl`)
-background-position: 50% 50%
-class: center, bottom, inverse
-
-# You only live once!
+If you are contributing to our GIS seminar's lessons, you'll need the [`sf`](https://github.com/r-spatial/sf) package from CRAN and the [development version of `ggplot2`](https://github.com/tidyverse/ggplot2/) from GitHub.
 
 ---
 
-# Hello Ninja
+# More Details, Please!
 
-As a presentation ninja, you certainly should not be satisfied by the "Hello World" example. You need to understand more about two things:
-
-1. The [remark.js](https://remarkjs.com) library;
-
-1. The **xaringan** package;
-
-Basically **xaringan** injected the chakra of R Markdown (minus Pandoc) into **remark.js**. The slides are rendered by remark.js in the web browser, and the Markdown source needed by remark.js is generated from R Markdown (**knitr**).
+We are building a [wiki](https://github.com/slu-dss/lesson-template/wiki) with additional details to help guide lesson maintainers.
 
 ---
 
-# remark.js
+# How Can I Get Started?
 
-You can see an introduction of remark.js from [its homepage](https://remarkjs.com). You should read the [remark.js Wiki](https://github.com/gnab/remark/wiki) at least once to know how to
+Contact one of the SLU DSS organizers:
 
-- create a new slide (Markdown syntax<sup>*</sup> and slide properties);
+* [Christina Gacia, Ph.D.](mailto:christina.garcia@slu.edu)
 
-- format a slide (e.g. text alignment);
+* [Kelly Lovejoy, Ph.D.](mailto:kelly.lovejoy@slu.edu@slu.edu)
 
-- configure the slideshow;
-
-- and use the presentation (keyboard shortcuts).
-
-It is important to be familiar with remark.js before you can understand the options in **xaringan**.
-
-.footnote[[*] It is different with Pandoc's Markdown! It is limited but should be enough for presentation purporses. Come on... You do not need a slide for the Table of Contents! Well, the Markdown support in remark.js [may be improved](https://github.com/gnab/remark/issues/142) in the future.]
-
----
-background-image: url(`r xaringan:::karl`)
-background-size: cover
-class: center, bottom, inverse
-
-# I was so happy to have discovered remark.js!
-
-
+* [Christopher Prener, Ph.D.](mailto:chris.prener@slu.edu})
