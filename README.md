@@ -5,7 +5,6 @@
 [![Travis-CI Build Status](https://travis-ci.org/slu-dss/lesson-template.svg?branch=master)](https://travis-ci.org/slu-dss/lesson-template)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/slu-dss/lesson-template?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/lesson-template)
 
-
 ## Lesson Overview
 This repository models the layout of a SLU DSS lesson. An overview of our lesson structure is available from the lesson's associated [slides](https://slu-dss.github.io/lesson-template/). Additional details are available from this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).
 
