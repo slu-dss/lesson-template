@@ -13,7 +13,8 @@ BugReports: https://github.com/slu-soc5650/lecture-09/issues
 Imports:
     knitr,
     rmarkdown,
-    stlData
+    stlData,
+    usethis,
     xaringan
 Remotes:
     chris-prener/stlData,

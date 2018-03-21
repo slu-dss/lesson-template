@@ -2,7 +2,7 @@
 title: "Lesson Template"
 subtitle: "An Overview of How Our Lessons Are Structured"
 author: "SLU DSS"
-date: "3/7/2018"
+date: "3/20/2018"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -23,7 +23,7 @@ options(htmltools.dir.version = FALSE)
 ---
 # What is a lesson?
 
-Each lesson for SLU DSS is a part of a seminar, which is a group of lessons organized around a core theme. 
+Each lesson for SLU DSS is a part of a seminar, which is a group of lessons organized around a core theme.
 
 --
 
@@ -51,11 +51,17 @@ Seminars typically have four lessons. Each lesson is designed to be delivered in
 
 Each lesson has a corresponding GitHub repository. We are currently revising each lesson so that it contains the following key items:
 
-* A **`README.md`** file that describes the lesson's objectives, `R` packages it requires, and provides links to additional resources.
+* A **`README.md`** file that describes the lesson's objectives, provides a `usethis` download link, and provides links to additional resources.
+
+* A Creative Commons [**BY-SA 4.0 license**](https://creativecommons.org/licenses/by-sa/4.0/)
 
 * An **R project** (`.Rproj`) file that participants can use to easily access lesson materials.
 
-* Any **data** that is required, *though we prioritize using data available in packages.*
+* A **`.gitignore`** file 
+
+* A **`DESCRIPTION`** file that provides systematically organized metadata, and allows us to test repositories using **continuous integration** tools to ensure our code stays up-to-date
+
+    * Settings **`.yml`** files for Travis-CI (for testing code on macOS/linux) and Appveyor (for testing code on Windows)
 
 ---
 
@@ -63,13 +69,27 @@ Each lesson has a corresponding GitHub repository. We are currently revising eac
 
 Each lesson has a corresponding GitHub repository. We are currently revising each lesson so that it contains the following key items:
 
+* Any **data** that is required, *though we prioritize using data available in packages.*
+
 * An **R notebook** written in the style of [literate programming](https://en.wikipedia.org/wiki/Literate_programming) that contains narrative text that explains the particulars of a topic, provides example code, and provides empty code blocks for participants to practice in.
 
    * A complete version of the R notebook that contains all code, including the solutions to the empty areas provided for participant practice.
-   
+
 * A set of **slides** (like these!) made with `xaringan` that give a high level overview of the lesson.
 
-* A **challenge** for students to complete after the lesson if they want to practice, and a corresponding set of replication code for students to check their own work.
+* A **challenge** for participants to complete after the lesson if they want to practice, and a corresponding set of replication code for participants to check their own work.
+
+---
+
+# How are lessons organized?
+
+Each lesson has a corresponding GitHub repository. We are currently revising each lesson so that it contains the following key items:
+
+* A set of **reference** materials that help participants get set-up and highlight key terms, concepts, and packages 
+
+* A **`.github/`** directory with instructions for contributing to the lesson
+
+* A **`CONTRIBUTORS.md`** file acknowledging everyone who has contributed to the lesson
 
 ---
 
