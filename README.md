@@ -8,13 +8,6 @@
 ## Lesson Overview
 This repository models the layout of a SLU DSS lesson. An overview of our lesson structure is available from the lesson's associated [slides](https://slu-dss.github.io/lesson-template/). Additional details are available from this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).
 
-## Access Lesson
-You can download this lesson to your Desktop easily using `usethis`:
-
-```r
-usethis::use_course("https://github.com/slu-dss/lesson-template/archive/master.zip")
-```
-
 ### Objectives
 At the end of this lesson, participants should be able to:
 
@@ -30,6 +23,13 @@ At the end of this lesson, participants should be able to:
 
 ### Extra Resources
 < This should be a bulleted list of online resources that are connected to the material covered in the lesson. >
+
+## Access Lesson
+You can download this lesson to your Desktop easily using `usethis`:
+
+```r
+usethis::use_course("https://github.com/slu-dss/lesson-template/archive/master.zip")
+```
 
 ## Contributor Code of Conduct
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
