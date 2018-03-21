@@ -58,6 +58,7 @@ build_script:
 
 test_script:
   - Rscript -e "rmarkdown::render('docs/index.Rmd')"
+  - Rscript -e "rmarkdown::render('notebook/lesson-template.Rmd')"
 
 on_failure:
   - 7z a failure.zip *.Rcheck\*
