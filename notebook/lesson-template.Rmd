@@ -1,0 +1,61 @@
+---
+title: "Lesson Template Notebook"
+author: "Christopher Prener, Ph.D."
+date: '(`r format(Sys.time(), "%B %d, %Y")`)'
+output: 
+  github_document: default
+  html_notebook: default 
+---
+
+## Introduction
+This is a sample notebook that illustrates the notebook template that should be used for SLU DSS lessons.
+
+## Load Dependencies
+The following code loads the package dependencies for our analysis:
+
+```{r package-load}
+# tidyverse packages
+library(dplyr)    # data wrangling
+library(ggplot2)  # data plotting
+library(readr)    # work with csv files
+
+# other packages
+library(here)
+library(skimr)
+```
+
+## Load Data
+We'll use a data set describing asthma rates in St. Louis:
+
+```{r load-data}
+asthma <- read_csv(here("data", "stlAsthma.csv"))
+```
+
+## Explore Data
+### Listing Variables
+We'll start by using the `glimpse()` function from `dplyr` to list all of the variables and their formats:
+
+```{r list-vars}
+glimpse(asthma)
+```
+
+The key variables of interest here are the three variables that begin with `pct` - they include an estimated asthma prevalence for each census tract (`pctAsthma`) as well as high and low values based on a confidence interval for the main estimate. Each of these three variables is stored as a `dbl` (or "double") variable, meaning they contain numeric data suitable for statistical analysis and plotting.
+
+### Descriptive Statistics
+The `skimr` package provides an excellent descriptive statistics function called `skim()` that we can use to get quick numeric and visual(!) summaries of our data:
+
+```{r descriptive-stats}
+skim(asthma)
+```
+
+`skim()` segregates variables based on their type, unlike the base `R` `summary()` function. It also provides a small histogram for each distribution, which allows for easy comparison, and other summary statistics both for individual variables and the data set as a whole.
+
+### Histogram
+Finally, we'll create a histogram of the main variable of interest - `pctAsthma`. We'll use `ggplot2` to build the plot:
+
+```{r asthma-histogram}
+ggplot() +
+  geom_histogram(data = asthma, mapping = aes(pctAsthma))
+```
+
+We can see the a large number of census tracts have low asthma rates (below 10%). However, there are a sizeable cluster of tracts with rates between 12 and 15% with several tracts that have even higher rates.

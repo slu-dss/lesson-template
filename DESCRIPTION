@@ -11,8 +11,13 @@ Web: https://slu-dss.github.io
 URL: https://github.com/slu-dss/lesson-template
 BugReports: https://github.com/slu-soc5650/lecture-09/issues
 Imports:
+    dplyr,
+    ggplot2,
+    here,
     knitr,
+    readr,
     rmarkdown,
+    skimr,
     usethis,
     xaringan
 Remotes:
