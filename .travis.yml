@@ -5,6 +5,7 @@ cache: false
 r:
   - oldrel
   - release
+  - devel
 
 os:
   - linux
