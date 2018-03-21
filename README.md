@@ -2,9 +2,19 @@
 [![](https://img.shields.io/badge/lesson%20status-under%20development-red.svg)](https://github.com/slu-dss/lesson-template/)
 [![](https://img.shields.io/github/release/slu-dss/lesson-template.svg?label=version)](https://github.com/slu-dss/lesson-template/releases)
 [![](https://img.shields.io/github/last-commit/slu-dss/lesson-template.svg)](https://github.com/slu-dss/lesson-template/commits/master)
+[![Travis-CI Build Status](https://travis-ci.org/slu-dss/lesson-template.svg?branch=master)](https://travis-ci.org/slu-dss/lesson-template)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/slu-dss/lesson-template?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/lesson-template)
+
 
 ## Lesson Overview
-This repository models the layout of a SLU DSS lesson. An overview of our lesson structure is available from the lesson's associated [slides](https://slu-dss.github.io/lesson-template/). Additional details are avilable from this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).
+This repository models the layout of a SLU DSS lesson. An overview of our lesson structure is available from the lesson's associated [slides](https://slu-dss.github.io/lesson-template/). Additional details are available from this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).
+
+## Access Lesson
+You can download this lesson to your Desktop easily using `usethis`:
+
+```r
+usethis::use_course("https://github.com/slu-dss/lesson-template/archive/master.zip")
+```
 
 ### Objectives
 At the end of this lesson, participants should be able to:
@@ -13,52 +23,14 @@ At the end of this lesson, participants should be able to:
 2. Describe the purposes of each key element.
 3. Employ RStudio to update a lesson.
 
-### Dependencies
-This lesson requires the following `R` packages from CRAN:
-- [`devtools`](https://github.com/r-lib/devtools)
-- [`knitr`](https://yihui.name/knitr/)
-- [`RMarkdown`](https://rmarkdown.rstudio.com)
+### Lesson Resources
+* The [`SETUP.md`](/references/SETUP.md) file in the [`references/`](/references) directory contains a list of packages required for this lesson
+* The [lesson slides](https://slu-dss.github.io/lesson-template/) provide an overview of lesson maintainece
+* The [`references/`](/references) directory also contains other notes on changes to the repository, key topics, terms, data sources, and software.
+* A more detailed description of our lesson materials is available in this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).
 
-To install a package from CRAN, type the following into your console:
-
-```r
-install.packages("devtools")
-```
-
-This lesson requires the following `R` packages from GitHub:
-- [`xaringan`](https://github.com/yihui/xaringan)
-
-To install a package from GitHub using `devtools`, type the following into your console:
-
-```r
-devtools::install_github("yihui/xaringan")
-```
-
-### Repository Contents
-This repository contains the following core materials:
-- `challenge/` - lesson challenge materials
-- `data/` - lesson data
-- `notebook/` - lesson notebooks
-- `lesson-template.Rproj` - R project for lesson
-- `README.md` - lesson description and resources
-
-This repository contains the following additional materials:
-- `docs/` - lesson slides, which can be seen [here](https://slu-dss.github.io/lesson-template/)
-- `img/` - image files associated with the lesson
-- `.gitignore`
-- `CONDUCT.md` - code of conduct for contributors
-- `CONTRIBUTORS.md` - list of lesson contributors
-- `LICENSE`
-
-### Resources
+### Extra Resources
 < This should be a bulleted list of online resources that are connected to the material covered in the lesson. >
-
-## Access Lesson
-You can download this lesson to your Desktop easily using `usethis`:
-
-```r
-usethis::use_course("https://github.com/slu-dss/lesson-template/archive/master.zip")
-```
 
 ## Contributor Code of Conduct
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
