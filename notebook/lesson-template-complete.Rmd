@@ -23,7 +23,9 @@ library(readr)    # work with csv files
 Now you try loading two additional packages - `here` (for working with file paths) and `skimr` (for generating descriptive statistics):
 
 ```{r package-load-2}
-
+# other packages
+library(here)    # work with file paths
+library(skimr)   # descriptive statistics
 ```
 
 ## Load Data
@@ -36,7 +38,7 @@ asthma <- read_csv(here("data", "stlAsthma.csv"))
 We also want to use a data set describing un-insurance rates in St. Louis (i.e. the number of people without health insurance). Practice loading data using the `read_csv()` and `here()` functions. Load your data into an object called `unins`:
 
 ```{r load-unins-data}
-
+unins <- read_csv(here("data", "stlInsurance.csv"))
 ```
 
 ## Explore Data
@@ -52,7 +54,7 @@ The key variables of interest here are the three variables that begin with `pct`
 Use the `glimpse()` function to create a similar list for the un-insurance data:
 
 ```{r list-unins-vars}
-
+glimpse(unins)
 ```
 
 ### Descriptive Statistics
@@ -67,7 +69,7 @@ skim(asthma)
 Use the `skim()` function to produce descriptive statistics for the un-insurance data:
 
 ```{r descriptive-stats-unins}
-
+skim(unins)
 ```
 
 ### Histogram
@@ -83,6 +85,6 @@ We can see the a large number of census tracts have low asthma rates (below 10%)
 Now it is your turn again! Create a histgoram of the un-insurance rate estimate for St. Louis:
 
 ```{r unins-histogram}
-
+ggplot() +
+  geom_histogram(data = unins, mapping = aes(pctUnins))
 ```
-

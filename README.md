@@ -17,6 +17,7 @@ At the end of this lesson, participants should be able to:
 
 ### Lesson Resources
 * The [`SETUP.md`](/references/SETUP.md) file in the [`references/`](/references) directory contains a list of packages required for this lesson
+* The [`notebook/`](/notebook) directory contains a sample notebook and a completed notebook that emulate the template we use during lessons
 * The [lesson slides](https://slu-dss.github.io/lesson-template/) provide an overview of lesson maintainece
 * The [`references/`](/references) directory also contains other notes on changes to the repository, key topics, terms, data sources, and software.
 * A more detailed description of our lesson materials is available in this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).

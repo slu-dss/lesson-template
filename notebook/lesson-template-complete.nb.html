@@ -144,7 +144,7 @@ $(document).ready(function () {
 </style>
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("lesson-template.Rmd");
+  window.initializeSourceEmbed("lesson-template-complete.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
@@ -196,6 +196,11 @@ library(readr)    # work with csv files</code></pre>
 <p>Now you try loading two additional packages - <code>here</code> (for working with file paths) and <code>skimr</code> (for generating descriptive statistics):</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBvdGhlciBwYWNrYWdlc1xubGlicmFyeShoZXJlKSAgICAjIHdvcmsgd2l0aCBmaWxlIHBhdGhzXG5saWJyYXJ5KHNraW1yKSAgICMgZGVzY3JpcHRpdmUgc3RhdGlzdGljc1xuYGBgIn0= -->
+<pre class="r"><code># other packages
+library(here)    # work with file paths
+library(skimr)   # descriptive statistics</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -207,11 +212,25 @@ library(readr)    # work with csv files</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXN0aG1hIDwtIHJlYWRfY3N2KGhlcmUoXCJkYXRhXCIsIFwic3RsQXN0aG1hLmNzdlwiKSlcbmBgYCJ9 -->
 <pre class="r"><code>asthma &lt;- read_csv(here(&quot;data&quot;, &quot;stlAsthma.csv&quot;))</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBnZW9JRCA9IGNvbF9kb3VibGUoKSxcbiAgdHJhY3RDRSA9IGNvbF9kb3VibGUoKSxcbiAgbmFtZUxTQUQgPSBjb2xfY2hhcmFjdGVyKCksXG4gIHBjdEFzdGhtYSA9IGNvbF9kb3VibGUoKSxcbiAgcGN0QXN0aG1hX0xvdyA9IGNvbF9kb3VibGUoKSxcbiAgcGN0QXN0aG1hX0hpZ2ggPSBjb2xfZG91YmxlKClcbilcbiJ9 -->
+<pre><code>Parsed with column specification:
+cols(
+  geoID = col_double(),
+  tractCE = col_double(),
+  nameLSAD = col_character(),
+  pctAsthma = col_double(),
+  pctAsthma_Low = col_double(),
+  pctAsthma_High = col_double()
+)</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We also want to use a data set describing un-insurance rates in St. Louis (i.e. the number of people without health insurance). Practice loading data using the <code>read_csv()</code> and <code>here()</code> functions. Load your data into an object called <code>unins</code>:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudW5pbnMgPC0gcmVhZF9jc3YoaGVyZShcImRhdGFcIiwgXCJzdGxJbnN1cmFuY2UuY3N2XCIpKVxuYGBgIn0= -->
+<pre class="r"><code>unins &lt;- read_csv(here(&quot;data&quot;, &quot;stlInsurance.csv&quot;))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -225,12 +244,25 @@ library(readr)    # work with csv files</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2xpbXBzZShhc3RobWEpXG5gYGAifQ== -->
 <pre class="r"><code>glimpse(asthma)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiT2JzZXJ2YXRpb25zOiAxMDZcblZhcmlhYmxlczogNlxuJCBnZW9JRCAgICAgICAgICA8ZGJsPiAyOTUxMDExODEwMCwgMjk1MTAxMTc0MDAsIDI5NTEwMTI2NzAwLCAyOTUxMDExOTEwMiwgMjk1MTAxMjY4MDAsIDI5NTEwMTI2OTAwLCAyOTUxMDEwLi4uXG4kIHRyYWN0Q0UgICAgICAgIDxkYmw+IDExODEwMCwgMTE3NDAwLCAxMjY3MDAsIDExOTEwMiwgMTI2ODAwLCAxMjY5MDAsIDEwODEwMCwgMTI3MDAwLCAxMjc0MDAsIDEwMzcwMCwgMTAzODAuLi5cbiQgbmFtZUxTQUQgICAgICAgPGNocj4gXCJDZW5zdXMgVHJhY3QgMTE4MVwiLCBcIkNlbnN1cyBUcmFjdCAxMTc0XCIsIFwiQ2Vuc3VzIFRyYWN0IDEyNjdcIiwgXCJDZW5zdXMgVHJhY3QgMTE5MS4wMlwiLi4uXG4kIHBjdEFzdGhtYSAgICAgIDxkYmw+IDExLjksIDkuNiwgMTQuNSwgOS4wLCA5LjMsIDEzLjYsIDEyLjcsIDEyLjgsIDEyLjcsIDguNiwgOS4xLCAxMC45LCA4LjgsIDE0LjYsIDEzLjUsIDguLi5cbiQgcGN0QXN0aG1hX0xvdyAgPGRibD4gMTEuMSwgOS4zLCAxMy41LCA4LjUsIDguOCwgMTIuNiwgMTEuOCwgMTEuNywgMTEuOSwgOC4xLCA4LjUsIDEwLjIsIDguNCwgMTMuNCwgMTIuNywgOC4uLlxuJCBwY3RBc3RobWFfSGlnaCA8ZGJsPiAxMi43LCAxMC4wLCAxNS41LCA5LjcsIDkuOCwgMTQuNiwgMTMuOCwgMTQuMiwgMTMuOCwgOS4yLCA5LjYsIDExLjYsIDkuMywgMTUuOSwgMTQuNiwgLi4uXG4ifQ== -->
+<pre><code>Observations: 106
+Variables: 6
+$ geoID          &lt;dbl&gt; 29510118100, 29510117400, 29510126700, 29510119102, 29510126800, 29510126900, 2951010...
+$ tractCE        &lt;dbl&gt; 118100, 117400, 126700, 119102, 126800, 126900, 108100, 127000, 127400, 103700, 10380...
+$ nameLSAD       &lt;chr&gt; &quot;Census Tract 1181&quot;, &quot;Census Tract 1174&quot;, &quot;Census Tract 1267&quot;, &quot;Census Tract 1191.02&quot;...
+$ pctAsthma      &lt;dbl&gt; 11.9, 9.6, 14.5, 9.0, 9.3, 13.6, 12.7, 12.8, 12.7, 8.6, 9.1, 10.9, 8.8, 14.6, 13.5, 8...
+$ pctAsthma_Low  &lt;dbl&gt; 11.1, 9.3, 13.5, 8.5, 8.8, 12.6, 11.8, 11.7, 11.9, 8.1, 8.5, 10.2, 8.4, 13.4, 12.7, 8...
+$ pctAsthma_High &lt;dbl&gt; 12.7, 10.0, 15.5, 9.7, 9.8, 14.6, 13.8, 14.2, 13.8, 9.2, 9.6, 11.6, 9.3, 15.9, 14.6, ...</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>The key variables of interest here are the three variables that begin with <code>pct</code> - they include an estimated asthma prevalence for each census tract (<code>pctAsthma</code>) as well as high and low values based on a confidence interval for the main estimate. Each of these three variables is stored as a <code>dbl</code> (or “double”) variable, meaning they contain numeric data suitable for statistical analysis and plotting.</p>
 <p>Use the <code>glimpse()</code> function to create a similar list for the un-insurance data:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2xpbXBzZSh1bmlucylcbmBgYCJ9 -->
+<pre class="r"><code>glimpse(unins)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -242,12 +274,32 @@ library(readr)    # work with csv files</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2tpbShhc3RobWEpXG5gYGAifQ== -->
 <pre class="r"><code>skim(asthma)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU2tpbSBzdW1tYXJ5IHN0YXRpc3RpY3NcbiBuIG9iczogMTA2IFxuIG4gdmFyaWFibGVzOiA2IFxuXG5WYXJpYWJsZSB0eXBlOiBjaGFyYWN0ZXIgXG4gdmFyaWFibGUgbWlzc2luZyBjb21wbGV0ZSAgIG4gbWluIG1heCBlbXB0eSBuX3VuaXF1ZVxuIG5hbWVMU0FEICAgICAgIDAgICAgICAxMDYgMTA2ICAxNyAgMjAgICAgIDAgICAgICAxMDZcblxuVmFyaWFibGUgdHlwZTogbnVtZXJpYyBcbiAgICAgICB2YXJpYWJsZSBtaXNzaW5nIGNvbXBsZXRlICAgbiAgICAgIG1lYW4gICAgICBzZCAgICAgIHAwICAgICAgIHAyNSAgICBtZWRpYW4gICAgICAgcDc1ICAgICBwMTAwICAgICBoaXN0XG4gICAgICAgICAgZ2VvSUQgICAgICAgMCAgICAgIDEwNiAxMDYgIDNlKzEwICAgIDgxMzIuODUgM2UrMTAgICAgM2UrMTAgICAgIDNlKzEwICAgICAzZSsxMCAgICAgM2UrMTAgICDilofilofiloXilobilofiloPiloPilodcbiAgICAgIHBjdEFzdGhtYSAgICAgICAwICAgICAgMTA2IDEwNiAgICAgMTEuNjEgICAgMi4xNSAgICAgOC41ICAgICAgOS41ICAgICAgMTIuMDUgICAgIDEzLjQ3ICAgICAxNi41IOKWh+KWg+KWguKWheKWhuKWheKWgeKWgVxuIHBjdEFzdGhtYV9IaWdoICAgICAgIDAgICAgICAxMDYgMTA2ICAgICAxMi40OCAgICAyLjM5ICAgICA5ICAgICAgIDEwLjE1ICAgICAxMi45NSAgICAgMTQuNSAgICAgIDE4LjIg4paH4paF4paC4paF4paG4paF4paB4paBXG4gIHBjdEFzdGhtYV9Mb3cgICAgICAgMCAgICAgIDEwNiAxMDYgICAgIDEwLjg1ICAgIDEuOTMgICAgIDggICAgICAgIDguOTMgICAgIDExLjM1ICAgICAxMi42ICAgICAgMTUgICDilofilobiloLiloPilobilofiloLiloFcbiAgICAgICAgdHJhY3RDRSAgICAgICAwICAgICAgMTA2IDEwNiAxMTMzODUuOTIgODEzMi44NSAxZSswNSAgIDEwNjQyNSAgICAxMTIzNTAgICAgMTE5MTAxLjc1IDEyNzYwMCAgIOKWh+KWh+KWheKWhuKWh+KWg+KWg+KWh1xuIn0= -->
+<pre><code>Skim summary statistics
+ n obs: 106 
+ n variables: 6 
+
+Variable type: character 
+ variable missing complete   n min max empty n_unique
+ nameLSAD       0      106 106  17  20     0      106
+
+Variable type: numeric 
+       variable missing complete   n      mean      sd      p0       p25    median       p75     p100     hist
+          geoID       0      106 106  3e+10    8132.85 3e+10    3e+10     3e+10     3e+10     3e+10   ▇▇▅▆▇▃▃▇
+      pctAsthma       0      106 106     11.61    2.15     8.5      9.5      12.05     13.47     16.5 ▇▃▂▅▆▅▁▁
+ pctAsthma_High       0      106 106     12.48    2.39     9       10.15     12.95     14.5      18.2 ▇▅▂▅▆▅▁▁
+  pctAsthma_Low       0      106 106     10.85    1.93     8        8.93     11.35     12.6      15   ▇▆▂▃▆▇▂▁
+        tractCE       0      106 106 113385.92 8132.85 1e+05   106425    112350    119101.75 127600   ▇▇▅▆▇▃▃▇</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><code>skim()</code> segregates variables based on their type, unlike the base <code>R</code> <code>summary()</code> function. It also provides a small histogram for each distribution, which allows for easy comparison, and other summary statistics both for individual variables and the data set as a whole.</p>
 <p>Use the <code>skim()</code> function to produce descriptive statistics for the un-insurance data:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2tpbSh1bmlucylcbmBgYCJ9 -->
+<pre class="r"><code>skim(unins)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -266,13 +318,15 @@ library(readr)    # work with csv files</code></pre>
 <p>Now it is your turn again! Create a histgoram of the un-insurance rate estimate for St. Louis:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KCkgK1xuICBnZW9tX2hpc3RvZ3JhbShkYXRhID0gdW5pbnMsIG1hcHBpbmcgPSBhZXMocGN0VW5pbnMpKVxuYGBgIn0= -->
+<pre class="r"><code>ggplot() +
+  geom_histogram(data = unins, mapping = aes(pctUnins))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGVzc29uIFRlbXBsYXRlIE5vdGVib29rLCBDb21wbGV0ZWQiCmF1dGhvcjogIkNocmlzdG9waGVyIFByZW5lciwgUGguRC4iCmRhdGU6ICcoYHIgZm9ybWF0KFN5cy50aW1lKCksICIlQiAlZCwgJVkiKWApJwpvdXRwdXQ6IAogIGdpdGh1Yl9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQgCi0tLQoKIyMgSW50cm9kdWN0aW9uClRoaXMgaXMgYSBzYW1wbGUgbm90ZWJvb2sgdGhhdCBpbGx1c3RyYXRlcyB0aGUgbm90ZWJvb2sgdGVtcGxhdGUgdGhhdCBzaG91bGQgYmUgdXNlZCBmb3IgU0xVIERTUyBsZXNzb25zLgoKIyMgTG9hZCBEZXBlbmRlbmNpZXMKVGhlIGZvbGxvd2luZyBjb2RlIGxvYWRzIHRoZSBwYWNrYWdlIGRlcGVuZGVuY2llcyBmb3Igb3VyIGFuYWx5c2lzIGZyb20gdGhlIGB0aWR5dmVyc2VgOgoKYGBge3IgcGFja2FnZS1sb2FkLTF9CiMgdGlkeXZlcnNlIHBhY2thZ2VzCmxpYnJhcnkoZHBseXIpICAgICMgZGF0YSB3cmFuZ2xpbmcKbGlicmFyeShnZ3Bsb3QyKSAgIyBkYXRhIHBsb3R0aW5nCmxpYnJhcnkocmVhZHIpICAgICMgd29yayB3aXRoIGNzdiBmaWxlcwpgYGAKCk5vdyB5b3UgdHJ5IGxvYWRpbmcgdHdvIGFkZGl0aW9uYWwgcGFja2FnZXMgLSBgaGVyZWAgKGZvciB3b3JraW5nIHdpdGggZmlsZSBwYXRocykgYW5kIGBza2ltcmAgKGZvciBnZW5lcmF0aW5nIGRlc2NyaXB0aXZlIHN0YXRpc3RpY3MpOgoKYGBge3IgcGFja2FnZS1sb2FkLTJ9CgpgYGAKCiMjIExvYWQgRGF0YQpXZSdsbCB1c2UgYSBkYXRhIHNldCBkZXNjcmliaW5nIGFzdGhtYSByYXRlcyBpbiBTdC4gTG91aXM6CgpgYGB7ciBsb2FkLWFzdGhtYS1kYXRhfQphc3RobWEgPC0gcmVhZF9jc3YoaGVyZSgiZGF0YSIsICJzdGxBc3RobWEuY3N2IikpCmBgYAoKV2UgYWxzbyB3YW50IHRvIHVzZSBhIGRhdGEgc2V0IGRlc2NyaWJpbmcgdW4taW5zdXJhbmNlIHJhdGVzIGluIFN0LiBMb3VpcyAoaS5lLiB0aGUgbnVtYmVyIG9mIHBlb3BsZSB3aXRob3V0IGhlYWx0aCBpbnN1cmFuY2UpLiBQcmFjdGljZSBsb2FkaW5nIGRhdGEgdXNpbmcgdGhlIGByZWFkX2NzdigpYCBhbmQgYGhlcmUoKWAgZnVuY3Rpb25zLiBMb2FkIHlvdXIgZGF0YSBpbnRvIGFuIG9iamVjdCBjYWxsZWQgYHVuaW5zYDoKCmBgYHtyIGxvYWQtdW5pbnMtZGF0YX0KCmBgYAoKIyMgRXhwbG9yZSBEYXRhCiMjIyBMaXN0aW5nIFZhcmlhYmxlcwpXZSdsbCBzdGFydCBieSB1c2luZyB0aGUgYGdsaW1wc2UoKWAgZnVuY3Rpb24gZnJvbSBgZHBseXJgIHRvIGxpc3QgYWxsIG9mIHRoZSB2YXJpYWJsZXMgYW5kIHRoZWlyIGZvcm1hdHM6CgpgYGB7ciBsaXN0LWFzdGhtYS12YXJzfQpnbGltcHNlKGFzdGhtYSkKYGBgCgpUaGUga2V5IHZhcmlhYmxlcyBvZiBpbnRlcmVzdCBoZXJlIGFyZSB0aGUgdGhyZWUgdmFyaWFibGVzIHRoYXQgYmVnaW4gd2l0aCBgcGN0YCAtIHRoZXkgaW5jbHVkZSBhbiBlc3RpbWF0ZWQgYXN0aG1hIHByZXZhbGVuY2UgZm9yIGVhY2ggY2Vuc3VzIHRyYWN0IChgcGN0QXN0aG1hYCkgYXMgd2VsbCBhcyBoaWdoIGFuZCBsb3cgdmFsdWVzIGJhc2VkIG9uIGEgY29uZmlkZW5jZSBpbnRlcnZhbCBmb3IgdGhlIG1haW4gZXN0aW1hdGUuIEVhY2ggb2YgdGhlc2UgdGhyZWUgdmFyaWFibGVzIGlzIHN0b3JlZCBhcyBhIGBkYmxgIChvciAiZG91YmxlIikgdmFyaWFibGUsIG1lYW5pbmcgdGhleSBjb250YWluIG51bWVyaWMgZGF0YSBzdWl0YWJsZSBmb3Igc3RhdGlzdGljYWwgYW5hbHlzaXMgYW5kIHBsb3R0aW5nLgoKVXNlIHRoZSBgZ2xpbXBzZSgpYCBmdW5jdGlvbiB0byBjcmVhdGUgYSBzaW1pbGFyIGxpc3QgZm9yIHRoZSB1bi1pbnN1cmFuY2UgZGF0YToKCmBgYHtyIGxpc3QtdW5pbnMtdmFyc30KCmBgYAoKIyMjIERlc2NyaXB0aXZlIFN0YXRpc3RpY3MKVGhlIGBza2ltcmAgcGFja2FnZSBwcm92aWRlcyBhbiBleGNlbGxlbnQgZGVzY3JpcHRpdmUgc3RhdGlzdGljcyBmdW5jdGlvbiBjYWxsZWQgYHNraW0oKWAgdGhhdCB3ZSBjYW4gdXNlIHRvIGdldCBxdWljayBudW1lcmljIGFuZCB2aXN1YWwoISkgc3VtbWFyaWVzIG9mIG91ciBkYXRhOgoKYGBge3IgZGVzY3JpcHRpdmUtc3RhdHMtYXN0aG1hfQpza2ltKGFzdGhtYSkKYGBgCgpgc2tpbSgpYCBzZWdyZWdhdGVzIHZhcmlhYmxlcyBiYXNlZCBvbiB0aGVpciB0eXBlLCB1bmxpa2UgdGhlIGJhc2UgYFJgIGBzdW1tYXJ5KClgIGZ1bmN0aW9uLiBJdCBhbHNvIHByb3ZpZGVzIGEgc21hbGwgaGlzdG9ncmFtIGZvciBlYWNoIGRpc3RyaWJ1dGlvbiwgd2hpY2ggYWxsb3dzIGZvciBlYXN5IGNvbXBhcmlzb24sIGFuZCBvdGhlciBzdW1tYXJ5IHN0YXRpc3RpY3MgYm90aCBmb3IgaW5kaXZpZHVhbCB2YXJpYWJsZXMgYW5kIHRoZSBkYXRhIHNldCBhcyBhIHdob2xlLgoKVXNlIHRoZSBgc2tpbSgpYCBmdW5jdGlvbiB0byBwcm9kdWNlIGRlc2NyaXB0aXZlIHN0YXRpc3RpY3MgZm9yIHRoZSB1bi1pbnN1cmFuY2UgZGF0YToKCmBgYHtyIGRlc2NyaXB0aXZlLXN0YXRzLXVuaW5zfQoKYGBgCgojIyMgSGlzdG9ncmFtCkZpbmFsbHksIHdlJ2xsIGNyZWF0ZSBhIGhpc3RvZ3JhbSBvZiB0aGUgbWFpbiB2YXJpYWJsZSBvZiBpbnRlcmVzdCAtIGBwY3RBc3RobWFgLiBXZSdsbCB1c2UgYGdncGxvdDJgIHRvIGJ1aWxkIHRoZSBwbG90OgoKYGBge3IgYXN0aG1hLWhpc3RvZ3JhbX0KZ2dwbG90KCkgKwogIGdlb21faGlzdG9ncmFtKGRhdGEgPSBhc3RobWEsIG1hcHBpbmcgPSBhZXMocGN0QXN0aG1hKSkKYGBgCgpXZSBjYW4gc2VlIHRoZSBhIGxhcmdlIG51bWJlciBvZiBjZW5zdXMgdHJhY3RzIGhhdmUgbG93IGFzdGhtYSByYXRlcyAoYmVsb3cgMTAlKS4gSG93ZXZlciwgdGhlcmUgYXJlIGEgc2l6ZWFibGUgY2x1c3RlciBvZiB0cmFjdHMgd2l0aCByYXRlcyBiZXR3ZWVuIDEyIGFuZCAxNSUgd2l0aCBzZXZlcmFsIHRyYWN0cyB0aGF0IGhhdmUgZXZlbiBoaWdoZXIgcmF0ZXMuCgpOb3cgaXQgaXMgeW91ciB0dXJuIGFnYWluISBDcmVhdGUgYSBoaXN0Z29yYW0gb2YgdGhlIHVuLWluc3VyYW5jZSByYXRlIGVzdGltYXRlIGZvciBTdC4gTG91aXM6CgpgYGB7ciB1bmlucy1oaXN0b2dyYW19CgpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGVzc29uIFRlbXBsYXRlIE5vdGVib29rLCBDb21wbGV0ZWQiCmF1dGhvcjogIkNocmlzdG9waGVyIFByZW5lciwgUGguRC4iCmRhdGU6ICcoYHIgZm9ybWF0KFN5cy50aW1lKCksICIlQiAlZCwgJVkiKWApJwpvdXRwdXQ6IAogIGdpdGh1Yl9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQgCi0tLQoKIyMgSW50cm9kdWN0aW9uClRoaXMgaXMgYSBzYW1wbGUgbm90ZWJvb2sgdGhhdCBpbGx1c3RyYXRlcyB0aGUgbm90ZWJvb2sgdGVtcGxhdGUgdGhhdCBzaG91bGQgYmUgdXNlZCBmb3IgU0xVIERTUyBsZXNzb25zLgoKIyMgTG9hZCBEZXBlbmRlbmNpZXMKVGhlIGZvbGxvd2luZyBjb2RlIGxvYWRzIHRoZSBwYWNrYWdlIGRlcGVuZGVuY2llcyBmb3Igb3VyIGFuYWx5c2lzIGZyb20gdGhlIGB0aWR5dmVyc2VgOgoKYGBge3IgcGFja2FnZS1sb2FkLTF9CiMgdGlkeXZlcnNlIHBhY2thZ2VzCmxpYnJhcnkoZHBseXIpICAgICMgZGF0YSB3cmFuZ2xpbmcKbGlicmFyeShnZ3Bsb3QyKSAgIyBkYXRhIHBsb3R0aW5nCmxpYnJhcnkocmVhZHIpICAgICMgd29yayB3aXRoIGNzdiBmaWxlcwpgYGAKCk5vdyB5b3UgdHJ5IGxvYWRpbmcgdHdvIGFkZGl0aW9uYWwgcGFja2FnZXMgLSBgaGVyZWAgKGZvciB3b3JraW5nIHdpdGggZmlsZSBwYXRocykgYW5kIGBza2ltcmAgKGZvciBnZW5lcmF0aW5nIGRlc2NyaXB0aXZlIHN0YXRpc3RpY3MpOgoKYGBge3IgcGFja2FnZS1sb2FkLTJ9CiMgb3RoZXIgcGFja2FnZXMKbGlicmFyeShoZXJlKSAgICAjIHdvcmsgd2l0aCBmaWxlIHBhdGhzCmxpYnJhcnkoc2tpbXIpICAgIyBkZXNjcmlwdGl2ZSBzdGF0aXN0aWNzCmBgYAoKIyMgTG9hZCBEYXRhCldlJ2xsIHVzZSBhIGRhdGEgc2V0IGRlc2NyaWJpbmcgYXN0aG1hIHJhdGVzIGluIFN0LiBMb3VpczoKCmBgYHtyIGxvYWQtYXN0aG1hLWRhdGF9CmFzdGhtYSA8LSByZWFkX2NzdihoZXJlKCJkYXRhIiwgInN0bEFzdGhtYS5jc3YiKSkKYGBgCgpXZSBhbHNvIHdhbnQgdG8gdXNlIGEgZGF0YSBzZXQgZGVzY3JpYmluZyB1bi1pbnN1cmFuY2UgcmF0ZXMgaW4gU3QuIExvdWlzIChpLmUuIHRoZSBudW1iZXIgb2YgcGVvcGxlIHdpdGhvdXQgaGVhbHRoIGluc3VyYW5jZSkuIFByYWN0aWNlIGxvYWRpbmcgZGF0YSB1c2luZyB0aGUgYHJlYWRfY3N2KClgIGFuZCBgaGVyZSgpYCBmdW5jdGlvbnMuIExvYWQgeW91ciBkYXRhIGludG8gYW4gb2JqZWN0IGNhbGxlZCBgdW5pbnNgOgoKYGBge3IgbG9hZC11bmlucy1kYXRhfQp1bmlucyA8LSByZWFkX2NzdihoZXJlKCJkYXRhIiwgInN0bEluc3VyYW5jZS5jc3YiKSkKYGBgCgojIyBFeHBsb3JlIERhdGEKIyMjIExpc3RpbmcgVmFyaWFibGVzCldlJ2xsIHN0YXJ0IGJ5IHVzaW5nIHRoZSBgZ2xpbXBzZSgpYCBmdW5jdGlvbiBmcm9tIGBkcGx5cmAgdG8gbGlzdCBhbGwgb2YgdGhlIHZhcmlhYmxlcyBhbmQgdGhlaXIgZm9ybWF0czoKCmBgYHtyIGxpc3QtYXN0aG1hLXZhcnN9CmdsaW1wc2UoYXN0aG1hKQpgYGAKClRoZSBrZXkgdmFyaWFibGVzIG9mIGludGVyZXN0IGhlcmUgYXJlIHRoZSB0aHJlZSB2YXJpYWJsZXMgdGhhdCBiZWdpbiB3aXRoIGBwY3RgIC0gdGhleSBpbmNsdWRlIGFuIGVzdGltYXRlZCBhc3RobWEgcHJldmFsZW5jZSBmb3IgZWFjaCBjZW5zdXMgdHJhY3QgKGBwY3RBc3RobWFgKSBhcyB3ZWxsIGFzIGhpZ2ggYW5kIGxvdyB2YWx1ZXMgYmFzZWQgb24gYSBjb25maWRlbmNlIGludGVydmFsIGZvciB0aGUgbWFpbiBlc3RpbWF0ZS4gRWFjaCBvZiB0aGVzZSB0aHJlZSB2YXJpYWJsZXMgaXMgc3RvcmVkIGFzIGEgYGRibGAgKG9yICJkb3VibGUiKSB2YXJpYWJsZSwgbWVhbmluZyB0aGV5IGNvbnRhaW4gbnVtZXJpYyBkYXRhIHN1aXRhYmxlIGZvciBzdGF0aXN0aWNhbCBhbmFseXNpcyBhbmQgcGxvdHRpbmcuCgpVc2UgdGhlIGBnbGltcHNlKClgIGZ1bmN0aW9uIHRvIGNyZWF0ZSBhIHNpbWlsYXIgbGlzdCBmb3IgdGhlIHVuLWluc3VyYW5jZSBkYXRhOgoKYGBge3IgbGlzdC11bmlucy12YXJzfQpnbGltcHNlKHVuaW5zKQpgYGAKCiMjIyBEZXNjcmlwdGl2ZSBTdGF0aXN0aWNzClRoZSBgc2tpbXJgIHBhY2thZ2UgcHJvdmlkZXMgYW4gZXhjZWxsZW50IGRlc2NyaXB0aXZlIHN0YXRpc3RpY3MgZnVuY3Rpb24gY2FsbGVkIGBza2ltKClgIHRoYXQgd2UgY2FuIHVzZSB0byBnZXQgcXVpY2sgbnVtZXJpYyBhbmQgdmlzdWFsKCEpIHN1bW1hcmllcyBvZiBvdXIgZGF0YToKCmBgYHtyIGRlc2NyaXB0aXZlLXN0YXRzLWFzdGhtYX0Kc2tpbShhc3RobWEpCmBgYAoKYHNraW0oKWAgc2VncmVnYXRlcyB2YXJpYWJsZXMgYmFzZWQgb24gdGhlaXIgdHlwZSwgdW5saWtlIHRoZSBiYXNlIGBSYCBgc3VtbWFyeSgpYCBmdW5jdGlvbi4gSXQgYWxzbyBwcm92aWRlcyBhIHNtYWxsIGhpc3RvZ3JhbSBmb3IgZWFjaCBkaXN0cmlidXRpb24sIHdoaWNoIGFsbG93cyBmb3IgZWFzeSBjb21wYXJpc29uLCBhbmQgb3RoZXIgc3VtbWFyeSBzdGF0aXN0aWNzIGJvdGggZm9yIGluZGl2aWR1YWwgdmFyaWFibGVzIGFuZCB0aGUgZGF0YSBzZXQgYXMgYSB3aG9sZS4KClVzZSB0aGUgYHNraW0oKWAgZnVuY3Rpb24gdG8gcHJvZHVjZSBkZXNjcmlwdGl2ZSBzdGF0aXN0aWNzIGZvciB0aGUgdW4taW5zdXJhbmNlIGRhdGE6CgpgYGB7ciBkZXNjcmlwdGl2ZS1zdGF0cy11bmluc30Kc2tpbSh1bmlucykKYGBgCgojIyMgSGlzdG9ncmFtCkZpbmFsbHksIHdlJ2xsIGNyZWF0ZSBhIGhpc3RvZ3JhbSBvZiB0aGUgbWFpbiB2YXJpYWJsZSBvZiBpbnRlcmVzdCAtIGBwY3RBc3RobWFgLiBXZSdsbCB1c2UgYGdncGxvdDJgIHRvIGJ1aWxkIHRoZSBwbG90OgoKYGBge3IgYXN0aG1hLWhpc3RvZ3JhbX0KZ2dwbG90KCkgKwogIGdlb21faGlzdG9ncmFtKGRhdGEgPSBhc3RobWEsIG1hcHBpbmcgPSBhZXMocGN0QXN0aG1hKSkKYGBgCgpXZSBjYW4gc2VlIHRoZSBhIGxhcmdlIG51bWJlciBvZiBjZW5zdXMgdHJhY3RzIGhhdmUgbG93IGFzdGhtYSByYXRlcyAoYmVsb3cgMTAlKS4gSG93ZXZlciwgdGhlcmUgYXJlIGEgc2l6ZWFibGUgY2x1c3RlciBvZiB0cmFjdHMgd2l0aCByYXRlcyBiZXR3ZWVuIDEyIGFuZCAxNSUgd2l0aCBzZXZlcmFsIHRyYWN0cyB0aGF0IGhhdmUgZXZlbiBoaWdoZXIgcmF0ZXMuCgpOb3cgaXQgaXMgeW91ciB0dXJuIGFnYWluISBDcmVhdGUgYSBoaXN0Z29yYW0gb2YgdGhlIHVuLWluc3VyYW5jZSByYXRlIGVzdGltYXRlIGZvciBTdC4gTG91aXM6CgpgYGB7ciB1bmlucy1oaXN0b2dyYW19CmdncGxvdCgpICsKICBnZW9tX2hpc3RvZ3JhbShkYXRhID0gdW5pbnMsIG1hcHBpbmcgPSBhZXMocGN0VW5pbnMpKQpgYGAK</div>
 
 
 
