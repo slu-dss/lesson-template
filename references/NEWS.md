@@ -1,3 +1,7 @@
+# lesson-template v0.1.1.9000
+
+* Clarify `DESCRIPTION` is to enable testing of packages that need to be installed and not for ancillary packages 
+
 # lesson-template v0.1.0
 
 * Add `NEWS.md`
