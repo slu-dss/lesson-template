@@ -57,7 +57,6 @@ build_script:
   - travis-tool.sh install_deps
 
 test_script:
-  - Rscript -e "rmarkdown::render('docs/index.Rmd')"
   - Rscript -e "rmarkdown::render('notebook/lesson-template-complete.Rmd')"
 
 on_failure:

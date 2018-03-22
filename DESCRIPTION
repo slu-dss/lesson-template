@@ -18,7 +18,4 @@ Imports:
     readr,
     rmarkdown,
     skimr,
-    usethis,
-    xaringan
-Remotes:
-    yihui/xaringan
+    usethis
