@@ -6,7 +6,7 @@
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/slu-dss/lesson-template?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/lesson-template)
 
 ## Lesson Overview
-This repository models the layout of a SLU DSS lesson. An overview of our lesson structure is available from the lesson's associated [slides](https://slu-dss.github.io/lesson-template/). Additional details are available from this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).
+This repository models the layout of a SLU DSS lesson. An overview of our lesson structure is available from the lesson's associated [slides](https://slu-dss.github.io/lesson-template/). Additional details that describe each element of a lesson are available from this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).
 
 ### Objectives
 At the end of this lesson, participants should be able to:

@@ -1,6 +1,7 @@
-# lesson-template v0.1.1.9000
+# lesson-template v0.1.1
 
 * Clarify `DESCRIPTION` is to enable testing of packages that need to be installed and not for ancillary packages 
+* Update `.travis.yml` to remove `R` oldrel from list of allowed failures
 
 # lesson-template v0.1.0
 
