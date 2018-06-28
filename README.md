@@ -1,5 +1,5 @@
 # lesson-template <img src="/img/logo.png" align="right" />
-[![](https://img.shields.io/badge/lesson%20status-under%20development-red.svg)](https://github.com/slu-dss/lesson-template/)
+[![](https://img.shields.io/badge/lesson%20status-draft-orange.svg)](https://github.com/slu-dss/lesson-template/)
 [![](https://img.shields.io/github/release/slu-dss/lesson-template.svg?label=version)](https://github.com/slu-dss/lesson-template/releases)
 [![](https://img.shields.io/github/last-commit/slu-dss/lesson-template.svg)](https://github.com/slu-dss/lesson-template/commits/master)
 [![Travis-CI Build Status](https://travis-ci.org/slu-dss/lesson-template.svg?branch=master)](https://travis-ci.org/slu-dss/lesson-template)
