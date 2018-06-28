@@ -17,9 +17,9 @@ install.packages("tidyverse")
 ### Other Packages from CRAN
 This lesson requires the following `R` packages from CRAN:
 
-- [`devtools`](https://github.com/r-lib/devtools)
 - [`here`](https://github.com/krlmlr/here)
 - [`knitr`](https://yihui.name/knitr/)
+- [`remotes`](https://cran.r-project.org/package=remotes)
 - [`RMarkdown`](https://rmarkdown.rstudio.com)
 - [`skimr`](https://github.com/ropenscilabs/skimr)
 - [`usethis`](http://usethis.r-lib.org)
@@ -31,8 +31,8 @@ To install these packages, use the same `install.packages()` syntax above, but c
 This lesson requires the following `R` packages from GitHub:
 - [`xaringan`](https://github.com/yihui/xaringan)
 
-To install a package from GitHub using `devtools`, type the following into your console:
+To install a package from GitHub using `remotes`, type the following into your console:
 
 ```r
-devtools::install_github("yihui/xaringan")
+remotes::install_github("yihui/xaringan")
 ```
