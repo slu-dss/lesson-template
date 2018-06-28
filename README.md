@@ -18,7 +18,7 @@ At the end of this lesson, participants should be able to:
 ### Lesson Resources
 * The [`SETUP.md`](/references/SETUP.md) file in the [`references/`](/references) directory contains a list of packages required for this lesson
 * The [`notebook/`](/notebook) directory contains a sample notebook and a completed notebook that emulate the template we use during lessons
-* The [lesson slides](https://slu-dss.github.io/lesson-template/) provide an overview of lesson maintainece
+* The [lesson slides](https://slu-dss.github.io/lesson-template/) provide an overview of lesson maintenance
 * The [`references/`](/references) directory also contains other notes on changes to the repository, key topics, terms, data sources, and software.
 * A more detailed description of our lesson materials is available in this repository's [wiki](https://github.com/slu-dss/lesson-template/wiki).
 
@@ -31,6 +31,8 @@ You can download this lesson to your Desktop easily using `usethis`:
 ```r
 usethis::use_course("https://github.com/slu-dss/lesson-template/archive/master.zip")
 ```
+
+By using `usethis::use_course`, all of the lesson materials will be downloaded to your computer, automatically extracted, and saved to your desktop. You can then open the `.Rproj` file to get started.
 
 ## Contributor Code of Conduct
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
