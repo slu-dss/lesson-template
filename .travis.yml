@@ -19,3 +19,5 @@ matrix:
 
 script:
   - Rscript -e "rmarkdown::render('notebook/lesson-template-complete.Rmd')"
+  - Rscript -e "rmarkdown::render('challenge/lesson-template-challenge-complete.Rmd')"
+  
