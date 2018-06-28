@@ -1,3 +1,7 @@
+# lesson-template v0.2.0
+
+* Add `challenge/` material as example of how that should be organized
+
 # lesson-template v0.1.1
 
 * Clarify `DESCRIPTION` is to enable testing of packages that need to be installed and not for ancillary packages 
