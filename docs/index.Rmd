@@ -57,7 +57,7 @@ Each lesson has a corresponding GitHub repository. We are currently revising eac
 
 * An **R project** (`.Rproj`) file that participants can use to easily access lesson materials.
 
-* A **`.gitignore`** file 
+* A **`.gitignore`** file
 
 * A **`DESCRIPTION`** file that provides systematically organized metadata, and allows us to test repositories using **continuous integration** tools to ensure our code stays up-to-date
 
@@ -85,7 +85,7 @@ Each lesson has a corresponding GitHub repository. We are currently revising eac
 
 Each lesson has a corresponding GitHub repository. We are currently revising each lesson so that it contains the following key items:
 
-* A set of **reference** materials that help participants get set-up and highlight key terms, concepts, and packages 
+* A set of **reference** materials that help participants get set-up and highlight key terms, concepts, and packages
 
 * A **`.github/`** directory with instructions for contributing to the lesson
 

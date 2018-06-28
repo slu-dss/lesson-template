@@ -29,7 +29,7 @@ environment:
       R_ARCH: x64
 
     - R_VERSION: devel
-  
+
     - R_VERSION: patched
       R_ARCH: x64
 
