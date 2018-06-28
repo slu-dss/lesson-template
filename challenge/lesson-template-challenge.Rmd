@@ -1,0 +1,36 @@
+---
+title: "Lesson Template Challenge"
+author: "Christopher Prener, Ph.D."
+date: '(`r format(Sys.time(), "%B %d, %Y")`)'
+output:
+  github_document: default
+  html_notebook: default
+---
+
+## Introduction
+This is a sample notebook that illustrates the notebook template that should be used for SLU DSS lesson challenges. We've provided a little bit of structure, including a short example of the literate programming style, to help get you started!
+
+## Tasks
+
+1. Load the tabular data set `stlSmoking.csv` into your enviornment
+2. Make a list of the included variables using `dplyr`
+3. Calculate descriptive statistics for the included variables using `skmir`
+4. Create a histogram using `ggplot2`
+
+## Load Dependencies
+The following code loads the package dependencies.
+
+```{r package-load}
+
+```
+
+We now have the packages needed for our analyses.
+
+## Load Data
+
+## Explore Data
+### Listing Variables
+
+### Descriptive Statistics
+
+### Histogram

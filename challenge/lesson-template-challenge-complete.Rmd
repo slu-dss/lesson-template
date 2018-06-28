@@ -1,0 +1,69 @@
+---
+title: "Lesson Template Challenge, Completed"
+author: "Christopher Prener, Ph.D."
+date: '(`r format(Sys.time(), "%B %d, %Y")`)'
+output:
+  github_document: default
+  html_notebook: default
+---
+
+## Introduction
+This is a sample notebook that illustrates the notebook template that should be used for SLU DSS lesson challenges. We've provided a little bit of structure, including a short example of the literate programming style, to help get you started!
+
+## Tasks
+
+1. Load the tabular data set `stlSmoking.csv` into your enviornment
+2. Make a list of the included variables using `dplyr`
+3. Calculate descriptive statistics for the included variables using `skmir`
+4. Create a histogram using `ggplot2`
+
+## Load Dependencies
+The following code loads the package dependencies.
+
+```{r package-load}
+# tidyverse packages
+library(dplyr)    # data wrangling
+library(ggplot2)  # data plotting
+library(readr)    # work with csv files
+
+# other packages
+library(here)    # work with file paths
+library(skimr)   # descriptive statistics
+```
+
+## Load Data
+
+We'll use a data set describing smoking rates in St. Louis:
+
+```{r load-data}
+smoking <- read_csv(here("data", "stlSmoking.csv"))
+```
+
+## Explore Data
+### Listing Variables
+We'll start by using the `glimpse()` function from `dplyr` to list all of the variables and their formats:
+
+```{r list-vars}
+glimpse(smoking)
+```
+
+The key variables of interest here are the three variables that begin with `pct` - they include an estimated smoking prevalence for each census tract (`pctSmoke`) as well as high and low values based on a confidence interval for the main estimate. Each of these three variables is stored as a `dbl` (or "double") variable, meaning they contain numeric data suitable for statistical analysis and plotting.
+
+### Descriptive Statistics
+Next, we'll use the `skimr` package to generate descriptive statistics and visual summaries of our data:
+
+```{r descriptive-stats}
+skim(smoking)
+```
+
+For the main estimate, the average smoking prevalence is 26.40% with a range of 14.30% to 37.9%, meaning that about a quarter of the adult population of typical census tract smokes with a maximum of more than a third. The true population value of the estimate is likely to be between 23.03% and 29.86%.
+
+### Histogram
+Finally, we'll create a histogram of the main variable of interest - `pctSmoke`. We'll use `ggplot2` to build the plot:
+
+```{r histogram}
+ggplot() +
+  geom_histogram(data = smoking, mapping = aes(pctSmoke))
+```
+
+We can see that the distribution of smoking prevalence is bimodal - there are peaks at around 20% of the adult population and again at around 28% or 29% of the adult population.

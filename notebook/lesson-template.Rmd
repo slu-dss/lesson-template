@@ -2,9 +2,9 @@
 title: "Lesson Template Notebook, Completed"
 author: "Christopher Prener, Ph.D."
 date: '(`r format(Sys.time(), "%B %d, %Y")`)'
-output: 
+output:
   github_document: default
-  html_notebook: default 
+  html_notebook: default
 ---
 
 ## Introduction
@@ -85,4 +85,3 @@ Now it is your turn again! Create a histgoram of the un-insurance rate estimate 
 ```{r unins-histogram}
 
 ```
-
