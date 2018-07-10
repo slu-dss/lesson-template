@@ -1,7 +1,7 @@
 # Contributing to this Lesson
 
 ## Before Opening an Issue
-Before opening a new issue, be sure to [search issues and pull requests](../../issues)
+Before opening a new issue, be sure to [search issues and pull requests][issuesLink]
 to make sure the bug or typo hasn't been reported and/or already fixed.
 Similarly, search to make sure someone has not already made a suggestion. If
 there is a suggestion and you want to express support for it, please comment
@@ -16,7 +16,7 @@ remove `is:open` to search _all_ issues in the repo, open or closed.
 
 ### Fork, clone, branch
 The first thing you'll need to do is to [fork](https://help.github.com/articles/fork-a-repo/)
-[this lesson](../..), and then clone it locally.
+[this lesson][repoLink], and then clone it locally.
 We recommend that you create a branch for each PR.
 
 ### Style
@@ -52,3 +52,6 @@ auto-linking syntax (e.g. `#15`).
 Please note that this project is released with a [Contributor Code of
 Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to
 abide by its terms.
+
+[repoLink]: https://github.com/slu-dss/lesson-template
+[issuesLink]: https://github.com/slu-dss/lesson-template/issues
