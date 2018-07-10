@@ -1,7 +1,7 @@
 # Contributing to this Lesson
 
 ## Before Opening an Issue
-Before opening a new issue, be sure to [search issues and pull requests](../issues)
+Before opening a new issue, be sure to [search issues and pull requests](../../issues)
 to make sure the bug or typo hasn't been reported and/or already fixed.
 Similarly, search to make sure someone has not already made a suggestion. If
 there is a suggestion and you want to express support for it, please comment
@@ -16,7 +16,7 @@ remove `is:open` to search _all_ issues in the repo, open or closed.
 
 ### Fork, clone, branch
 The first thing you'll need to do is to [fork](https://help.github.com/articles/fork-a-repo/)
-[this lesson](..), and then clone it locally.
+[this lesson](../..), and then clone it locally.
 We recommend that you create a branch for each PR.
 
 ### Style
