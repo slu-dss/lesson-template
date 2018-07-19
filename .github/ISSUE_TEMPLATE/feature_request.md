@@ -5,7 +5,7 @@ about: Suggest an idea for this project
 ---
 
 **Before you open your issue:**
-* All issues and contributions are covered by our [Code of Conduct](../.github/CODE_OF_CONDUCT.md)
+* All issues and contributions are covered by our [Code of Conduct](/.github/CODE_OF_CONDUCT.md)
 
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
