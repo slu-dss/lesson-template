@@ -1,4 +1,27 @@
 # Contributing to this Lesson
+Thanks for using this SLU DSS lesson. Before filing an issue or opening a pull
+request, there are a few places to explore and pieces to put together to make
+the process as smooth as possible.
+
+## Getting Started
+Start by making a minimal reproducible example (**reprex**) using the
+[reprex](http://reprex.tidyverse.org/) package. If you haven't heard of or used
+reprex before, you're in for a treat! Seriously, reprex will make all of your
+R-question-asking endeavors easier (which is a pretty insane ROI for the five to
+ten minutes it'll take you to learn what it's all about). For additional reprex
+pointers, check out the [Get help!](https://www.tidyverse.org/help/) section of
+the tidyverse site.
+
+Armed with your reprex, the next step is to figure out [where to ask](https://www.tidyverse.org/help/#where-to-ask).
+
+  * If it's a question: start with [community.rstudio.com](https://community.rstudio.com/).
+    There are more people there to answer questions.  
+  * If it's a bug: you're in the right place, file an issue.  
+  * If it's a feature request: you're in the right place, file an issue.  
+  * If you're not sure: let the community help you figure it out! If your
+    problem _is_ a bug or a feature request, you can easily return here and
+    report it. You can use our _other inquiry_ issue template to get our
+    feedback.
 
 ## Before Opening an Issue
 Before opening a new issue, be sure to [search issues and pull requests][issuesLink]
@@ -12,7 +35,15 @@ By default, the search will be pre-populated with `is:issue is:open`. You can
 (e.g. `is:pr`, `is:closed`) as needed. For example, you'd simply
 remove `is:open` to search _all_ issues in the repo, open or closed.
 
+## Issue Templates
+When you go to open an issue, you are encouraged to select from one of the
+three templates: bug reports, feature requests, or other inquiries. These will
+help you craft an issue that is as helpful and clear as possible!
+
 ## PR process
+If you've found a way to contribute, please follow the PR process described
+here to fork, edit, and push your proposed changes. We recommend opening an
+issue to gauge our interest before spending time working on a PR!
 
 ### Fork, clone, branch
 The first thing you'll need to do is to [fork](https://help.github.com/articles/fork-a-repo/)
