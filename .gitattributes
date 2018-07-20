@@ -1,0 +1,5 @@
+$ cat .gitattributes
+*.Rmd linguist-language=R
+challenge/*.Rmd linguist-language=R
+docs/*.Rmd linguist-language=R
+notebook/*.Rmd linguist-language=R
