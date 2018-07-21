@@ -1,10 +1,16 @@
+# lesson-template v0.2.1
+
+* Add issue and pull request templates
+* Streamline language in `.github/` files
+* Complete draft of wiki
+
 # lesson-template v0.2.0
 
 * Add `challenge/` material as example of how that should be organized
 
 # lesson-template v0.1.1
 
-* Clarify `DESCRIPTION` is to enable testing of packages that need to be installed and not for ancillary packages 
+* Clarify `DESCRIPTION` is to enable testing of packages that need to be installed and not for ancillary packages
 * Update `.travis.yml` to remove `R` oldrel from list of allowed failures
 
 # lesson-template v0.1.0
