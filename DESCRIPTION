@@ -1,6 +1,6 @@
 Package: lesson-template
 Title: SLU DSS - Lesson Template
-Version: 0.2.0
+Version: 0.2.2
 Authors@R: person("Christopher", "Prener", email = "chris.prener@slu.edu",
                   role = c("aut", "cre"))
 Description: This repository contains a sample lesson structure for SLU

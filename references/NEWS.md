@@ -1,3 +1,7 @@
+# lesson-template v0.2.2
+
+* Add labels template `.github/labels.json`
+
 # lesson-template v0.2.1
 
 * Add issue and pull request templates
